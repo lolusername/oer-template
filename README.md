@@ -4,8 +4,7 @@ This is a minimal starter for faculty publishing OER content via GitHub Pages.
 
 ## Files
 
-- `template1.html`: A single-course page layout
-- `template2.html`: A multi-course OER portal
+- `index.html`: A single-course page layout
 - `_config.yml`: Jekyll-compatible config for setting site title, author, etc.
 - `README.md`: This file
 
