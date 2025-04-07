@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ site.title }}</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header, footer {
+      background: #004466;
+      color: white;
+      padding: 1rem 2rem;
+    }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: white;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    nav a {
+      color: white;
+      margin-right: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    .accordion {
+      cursor: pointer;
+      background: #eee;
+      padding: 1rem;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 1.1rem;
+    }
+    .panel {
+      display: none;
+      background: #f1f1f1;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>{{ site.title }}</h1>
+    <nav>
+      <a href="#courses">Courses</a>
+      <a href="#texts">Texts</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="courses">
+      <h2>Courses</h2>
+      <button class="accordion">Intro to Sociology (Spring 2025)</button>
+      <div class="panel">
+        <p><strong>Instructor:</strong> Prof. Maria Chan</p>
+        <ul>
+          <li><a href="sociology-syllabus.pdf">Syllabus</a></li>
+          <li><a href="readings-week1.pdf">Week 1 Readings</a></li>
+          <li><a href="slides-week1.pptx">Week 1 Slides</a></li>
+        </ul>
+      </div>
+      <button class="accordion">Digital Media Criticism (Fall 2024)</button>
+      <div class="panel">
+        <p><strong>Instructor:</strong> Dr. Ravi Singh</p>
+        <ul>
+          <li><a href="media-crit-syllabus.pdf">Syllabus</a></li>
+          <li><a href="media-case-studies/">Case Studies</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="texts">
+      <h2>Open Textbooks</h2>
+      <ul>
+        <li><a href="open-textbook-1.pdf">The History of Labor Movements (PDF)</a></li>
+        <li><a href="https://pressbooks.com/sample-oer">Intro to Critical Theory (Pressbooks link)</a></li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h2>About This Site</h2>
+      <p>This website hosts open educational materials created by faculty. Everything is free to use, modify, and share under Creative Commons licenses.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }} · <a href="mailto:contact@example.edu" style="color:lightblue;">Contact</a></p>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".accordion").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const panel = btn.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ site.title }}</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1, h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3em;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .meta {
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>{{ site.title }}</h1>
+  <p class="meta">An open educational resource by {{ site.author }} · Updated {{ site.time | date: "%B %Y" }}</p>
+
+  <h2>Course Overview</h2>
+  <p>This course explores the fundamentals of environmental science. All materials are freely available under a Creative Commons license.</p>
+
+  <h2>Modules</h2>
+  <ul>
+    <li><a href="module1.pdf">Module 1: Ecosystems and Biodiversity</a></li>
+    <li><a href="module2.pdf">Module 2: Climate and Weather Patterns</a></li>
+    <li><a href="module3.pdf">Module 3: Human Impact and Sustainability</a></li>
+  </ul>
+
+  <h2>License</h2>
+  <p>Content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+</body>
+</html>
